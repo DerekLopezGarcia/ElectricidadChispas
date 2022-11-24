@@ -1,38 +1,28 @@
-public class Autonomos implements Cliente{
+public class Sociedad  implements Cliente{
     private Integer CodigoCliente;
     private String DireccionPostal;
     private String Poblacion;
     private String Provincia;
     private String Email;
     private String Telefono;
-    private String DNI;
-    private String Nombre;
-    private String Apellidos;
+    private String Cif;
+    private String RazonSocial;
 
-    public String getDNI() {
-        return DNI;
+    public String getCif() {
+        return Cif;
     }
 
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
+    public void setCif(String cif) {
+        Cif = cif;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public String getRazonSocial() {
+        return RazonSocial;
     }
 
-    public void setNombre(String nombre) {
-        Nombre = nombre;
+    public void setRazonSocial(String razonSocial) {
+        RazonSocial = razonSocial;
     }
-
-    public String getApellidos() {
-        return Apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        Apellidos = apellidos;
-    }
-
 
     @Override
     public Integer getCodigoCliente() {
