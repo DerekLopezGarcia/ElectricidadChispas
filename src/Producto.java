@@ -1,26 +1,42 @@
-import java.util.Date;
-
-public class servicio implements Venta{
-    private Integer CodigoServicio;
+public class Producto implements Venta{
+    private Integer CodigoProducto;
+    private String Nombre;
     private Integer Precio;
     private Integer Tipo;
-    private String Nombre;
+    private String Marca;
+    private String Modelo;
     private Integer Total;
 
 
+    public String getMarca() {
+        return Marca;
+    }
+
+    public void setMarca(String marca) {
+        Marca = marca;
+    }
+
+    public String getModelo() {
+        return Modelo;
+    }
+
+    public void setModelo(String modelo) {
+        Modelo = modelo;
+    }
+
     @Override
     public String getNombre() {
-        return Nombre;
+        return null;
     }
 
     @Override
     public Integer getPrecio() {
-        return Precio;
+        return null;
     }
 
     @Override
     public Integer getTipo() {
-        return Tipo;
+        return null;
     }
 
     @Override
@@ -40,12 +56,12 @@ public class servicio implements Venta{
 
     @Override
     public Integer getCodigo() {
-        return CodigoServicio;
+        return CodigoProducto;
     }
 
     @Override
     public void setCodigo(Integer Codigo) {
-        this.CodigoServicio=Codigo;
+        this.CodigoProducto=Codigo;
     }
 
     @Override

@@ -1,42 +1,24 @@
-public class producto implements Venta{
-    private Integer CodigoProducto;
-    private String Nombre;
+public class Servicio implements Venta{
+    private Integer CodigoServicio;
     private Integer Precio;
     private Integer Tipo;
-    private String Marca;
-    private String Modelo;
+    private String Nombre;
     private Integer Total;
 
 
-    public String getMarca() {
-        return Marca;
-    }
-
-    public void setMarca(String marca) {
-        Marca = marca;
-    }
-
-    public String getModelo() {
-        return Modelo;
-    }
-
-    public void setModelo(String modelo) {
-        Modelo = modelo;
-    }
-
     @Override
     public String getNombre() {
-        return null;
+        return Nombre;
     }
 
     @Override
     public Integer getPrecio() {
-        return null;
+        return Precio;
     }
 
     @Override
     public Integer getTipo() {
-        return null;
+        return Tipo;
     }
 
     @Override
@@ -56,12 +38,12 @@ public class producto implements Venta{
 
     @Override
     public Integer getCodigo() {
-        return CodigoProducto;
+        return CodigoServicio;
     }
 
     @Override
     public void setCodigo(Integer Codigo) {
-        this.CodigoProducto=Codigo;
+        this.CodigoServicio=Codigo;
     }
 
     @Override
