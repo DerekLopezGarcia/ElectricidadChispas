@@ -32,6 +32,7 @@ public class Main {
         autonomo.setEmail(scanner.nextLine());
         System.out.println("Telefono:");
         autonomo.setTelefono(scanner.nextLine());
+        autonomo.setCodigoCliente();
 
         System.out.println("Ahora creamos una sociedad");
         System.out.println("Razon Social:");
@@ -39,15 +40,16 @@ public class Main {
         System.out.println("Cif:");
         suciedad.setCif(scanner.nextLine());
         System.out.println("Direccion Postal:");
-        autonomo.setDireccionPostal(scanner.nextLine());
+        suciedad.setDireccionPostal(scanner.nextLine());
         System.out.println("Poblacion:");
-        autonomo.setPoblacion(scanner.nextLine());
+        suciedad.setPoblacion(scanner.nextLine());
         System.out.println("Provincia:");
-        autonomo.setProvincia(scanner.nextLine());
+        suciedad.setProvincia(scanner.nextLine());
         System.out.println("Email:");
-        autonomo.setEmail(scanner.nextLine());
+        suciedad.setEmail(scanner.nextLine());
         System.out.println("Telefono:");
-        autonomo.setTelefono(scanner.nextLine());
+        suciedad.setTelefono(scanner.nextLine());
+        suciedad.setCodigoCliente();
 
         System.out.println("Creamos 2 productos");
         System.out.println("Codigo:");
@@ -65,6 +67,7 @@ public class Main {
         System.out.println("Tipo iva:");
         producto1.setTipo(scanner.nextInt());
         scanner.nextLine();
+        producto1.setTotal();
         System.out.println("--------------------");
         System.out.println("Codigo:");
         producto2.setCodigo(scanner.nextInt());
@@ -81,6 +84,7 @@ public class Main {
         System.out.println("Tipo iva:");
         producto2.setTipo(scanner.nextInt());
         scanner.nextLine();
+        producto2.setTotal();
 
         System.out.println("a continuacion 2 servicios");
         System.out.println("Codigo:");
@@ -94,6 +98,7 @@ public class Main {
         System.out.println("Tipo iva:");
         servicio1.setTipo(scanner.nextInt());
         scanner.nextLine();
+        servicio1.setTotal();
         System.out.println("--------------------");
         System.out.println("Codigo:");
         servicio2.setCodigo(scanner.nextInt());
@@ -106,6 +111,7 @@ public class Main {
         System.out.println("Tipo iva:");
         servicio2.setTipo(scanner.nextInt());
         scanner.nextLine();
+        servicio2.setTotal();
 
         Factura factura1 = new Factura(autonomo);
         Factura factura2 = new Factura(suciedad);
@@ -115,6 +121,10 @@ public class Main {
         ArrayList<Venta>fac2= new ArrayList<Venta>();
         fac2.add(producto2);
         fac2.add(servicio2);
+        factura1.setVenta(fac1);
+        factura2.setVenta(fac2);
+        factura1.setTotal();
+        factura2.setTotal();
 
         System.out.println("vamos con la fatura 1");
         System.out.println("Codigo:");

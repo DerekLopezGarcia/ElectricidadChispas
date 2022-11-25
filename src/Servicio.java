@@ -53,6 +53,6 @@ public class Servicio implements Venta{
 
     @Override
     public void setTotal() {
-        this.Total=(Precio+Precio*(Tipo/100));
+        this.Total=(int) Math.floor(Precio+Precio*(Tipo/100));
     }
 }

@@ -41,7 +41,7 @@ public class Factura {
         return Total;
     }
 
-    public void setTotal(Integer total) {
+    public void setTotal() {
         Total = BaseImponible * 1.21;
     }
     public Factura(Cliente cliente){

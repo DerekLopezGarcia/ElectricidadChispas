@@ -26,17 +26,17 @@ public class Producto implements Venta{
 
     @Override
     public String getNombre() {
-        return null;
+        return Nombre;
     }
 
     @Override
     public Integer getPrecio() {
-        return null;
+        return Precio;
     }
 
     @Override
     public Integer getTipo() {
-        return null;
+        return Tipo;
     }
 
     @Override
@@ -71,6 +71,6 @@ public class Producto implements Venta{
 
     @Override
     public void setTotal() {
-        this.Total=(Precio+Precio*(Tipo/100));
+        this.Total=(int) Math.floor(Precio+Precio*(Tipo/100));
     }
 }
