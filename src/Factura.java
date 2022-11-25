@@ -1,10 +1,13 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Factura {
     private Integer CodigoFactura;
     private Date Fecha;
     private Integer BaseImponible;
-    private Integer Total;
+    private double Total;
+    private Cliente cliente;
+    private ArrayList<Venta> venta = new ArrayList<Venta>();
 
     public Integer getCodigoFactura() {
         return CodigoFactura;
@@ -26,15 +29,34 @@ public class Factura {
         return BaseImponible;
     }
 
-    public void setBaseImponible(Integer baseImponible) {
-        BaseImponible = baseImponible;
+    public void setBaseImponible(){
+       Integer total = 0;
+        for (Venta venta: this.venta) {
+            total+=venta.getPrecio();
+        }
+        this.BaseImponible=total;
     }
 
-    public Integer getTotal() {
+    public double getTotal() {
         return Total;
     }
 
     public void setTotal(Integer total) {
-        Total = total;
+        Total = BaseImponible * 1.21;
+    }
+    public Factura(Cliente cliente){
+        this.cliente = cliente;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public ArrayList<Venta> getVenta() {
+        return venta;
+    }
+
+    public void setVenta(ArrayList<Venta> venta) {
+        this.venta = venta;
     }
 }

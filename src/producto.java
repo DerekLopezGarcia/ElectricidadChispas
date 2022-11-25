@@ -1,18 +1,12 @@
 public class producto implements Venta{
     private Integer CodigoProducto;
     private String Nombre;
-    private String Precio;
-    private String Tipo;
+    private Integer Precio;
+    private Integer Tipo;
     private String Marca;
     private String Modelo;
+    private Integer Total;
 
-    public Integer getCodigoProducto() {
-        return CodigoProducto;
-    }
-
-    public void setCodigoProducto(Integer codigoProducto) {
-        CodigoProducto = codigoProducto;
-    }
 
     public String getMarca() {
         return Marca;
@@ -41,22 +35,42 @@ public class producto implements Venta{
     }
 
     @Override
-    public String getTipo() {
+    public Integer getTipo() {
         return null;
     }
 
     @Override
     public void setNombre(String Nombre) {
-
+        this.Nombre=Nombre;
     }
 
     @Override
     public void setPrecio(Integer Precio) {
-
+        this.Precio=Precio;
     }
 
     @Override
-    public void setTipo(String Tipo) {
+    public void setTipo(Integer Tipo) {
+        this.Tipo=Tipo;
+    }
 
+    @Override
+    public Integer getCodigo() {
+        return CodigoProducto;
+    }
+
+    @Override
+    public void setCodigo(Integer Codigo) {
+        this.CodigoProducto=Codigo;
+    }
+
+    @Override
+    public Integer getTotal() {
+        return Total;
+    }
+
+    @Override
+    public void setTotal() {
+        this.Total=(Precio+Precio*(Tipo/100));
     }
 }

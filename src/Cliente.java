@@ -1,6 +1,6 @@
 public interface Cliente {
-    public Integer getCodigoCliente();
-    public void setCodigoCliente(Integer CodigoCliente);
+    public String getCodigoCliente();
+    public void setCodigoCliente();
     public String getDireccionPostal();
     public void setDireccionPostal(String DireccionPostal);
     public String getPoblacion();
@@ -11,5 +11,7 @@ public interface Cliente {
     public void setEmail(String Email);
     public String getTelefono();
     public void setTelefono(String Telefono);
+    public String getNombre();
+    public void setNombre(String Nombre);
 
 }

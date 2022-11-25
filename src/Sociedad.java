@@ -1,5 +1,5 @@
 public class Sociedad  implements Cliente{
-    private Integer CodigoCliente;
+    private String CodigoCliente;
     private String DireccionPostal;
     private String Poblacion;
     private String Provincia;
@@ -16,71 +16,74 @@ public class Sociedad  implements Cliente{
         Cif = cif;
     }
 
-    public String getRazonSocial() {
-        return RazonSocial;
-    }
 
-    public void setRazonSocial(String razonSocial) {
-        RazonSocial = razonSocial;
+    @Override
+    public String getCodigoCliente() {
+        return CodigoCliente;
     }
 
     @Override
-    public Integer getCodigoCliente() {
-        return null;
-    }
-
-    @Override
-    public void setCodigoCliente(Integer CodigoCliente) {
-
+    public void setCodigoCliente() {
+        this.CodigoCliente=Cif;
     }
 
     @Override
     public String getDireccionPostal() {
-        return null;
+        return DireccionPostal;
     }
 
     @Override
     public void setDireccionPostal(String DireccionPostal) {
-
+        this.DireccionPostal=DireccionPostal;
     }
 
     @Override
     public String getPoblacion() {
-        return null;
+        return Poblacion;
     }
 
     @Override
     public void setPoblacion(String Poblacion) {
-
+        this.Poblacion=Poblacion;
     }
 
     @Override
     public String getPorvincia() {
-        return null;
+        return Provincia;
     }
 
     @Override
     public void setProvincia(String Provincia) {
-
+        this.Provincia=Provincia;
     }
 
     @Override
     public String getEmail() {
-        return null;
+        return Email;
     }
 
     @Override
     public void setEmail(String Email) {
-
+        this.Email=Email;
     }
 
     @Override
     public String getTelefono() {
-        return null;
+        return Telefono;
     }
 
     @Override
     public void setTelefono(String Telefono) {
+        this.Telefono=Telefono;
+    }
 
+    @Override
+    public String getNombre() {
+        return RazonSocial;
+    }
+
+    @Override
+    public void setNombre(String Nombre) {
+        this.RazonSocial=Nombre;
     }
 }
